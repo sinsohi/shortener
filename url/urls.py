@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('',views.show_home),
-    path('<str:url>', views.get_shortened_url)
+    path('<str:shortened>', views.get_shortened_url)
 
 ]
