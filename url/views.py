@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from url.forms import UrlForm
 from url.models import URL
+import random
 
 # Create your views here.
 def get_shortened_url(request, shortened):
@@ -14,7 +15,7 @@ def show_home(request):
     if request.method == 'POST':
         form = UrlForm(request.POST)
         url = form.save(commit=False)
-        url.shortened = url.link[0:5]
+        url.shortened = ''.join((random.choice(url.link)) for char in range(5))
         url.save()
         return render(request, 'url/shorten.html',{"url":url.shortened})
     url_form = UrlForm()
