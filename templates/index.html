@@ -4,9 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <title>URL 링크단축 서비스</title>
+    <style>
+        body {
+            background: rgba(217, 203, 232, 0.37);
+        }
+
+        h1 {
+            color: #000;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        label {
+            color: #000;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+        }
+
+        input {
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.65);
+            width: 349px;
+            height: 37px;
+            flex-shrink: 0;
+        }
+
+        button {
+            width: 160px;
+            height: 31px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            background: rgba(173, 154, 193, 0.37);
+            color: #000;
+            font-family: Patua One;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    </style>
 </head>
 
 <body>
+    {% include "header.html"%}
     {% block content %}
     {% endblock %}
 </body>

@@ -1,9 +1,13 @@
 {% extends "index.html" %}
 
 {% block content %}
+<h1>
+    Url Shortener
+</h1>
+
 <form method="post">
     {% csrf_token %}
     {{form}}
-    <button type="submit">단축</button>>
+    <button type="submit">shorten url</button>>
 </form>
 {% endblock %}

@@ -1,0 +1,10 @@
+<header>
+    <nav>
+        {% if user.is_authenticated %}
+            {{ user.username }}
+        {% else %}
+            <a href="{% url 'account:login' %}">로그인</a>
+        {% endif %}
+
+    </nav>
+</header>
